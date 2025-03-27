@@ -19,6 +19,7 @@ $packages =
     "Git.Git",
     "Microsoft.PowerToys",
     "Microsoft.WindowsTerminal"
+    "Microsoft.DotNet.SDK.8"
 Invoke-Expression "winget ls" -OutVariable installedPackages | Out-Null
 $installedPackages = $installedPackages -split "\s"
 foreach ($package in $packages) {
@@ -66,6 +67,7 @@ foreach ($ext in $extensions) {
     }
 }
 Write-Host "------------------------------------------------------------"
+Write-Host
 Write-Host "Windows Setup Script Completed------------------------------" -ForegroundColor Cyan
 $countdownSeconds = 10
 
